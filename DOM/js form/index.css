@@ -8,3 +8,7 @@ main {
 form {
     height: 100vh !important;
 }
+
+#div {
+    margin-left: 0 !important;
+}

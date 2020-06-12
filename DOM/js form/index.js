@@ -14,7 +14,14 @@ $("email1").appendChild(createEmail);
 
 //chức năng xoá 
 function removeElement() {
-    var removeEl = this.parentElement;
+    var removeEl = this;
+    var div_block = this.parentElement.parentElement;
+    var number = div_block.childElementCount;
+    if (number > 1) {
+        var el_i = this;
+        var el_div_parent = this.parentElement;
+        el_div_parent.remove();
+    }
     removeEl.remove();
 }
 var clickadd = document.getElementsByClassName("fa-plus-circle");
@@ -48,6 +55,16 @@ $("form").appendChild(createPhone);
 // }
 
 // function remove() {
+// var el_i = this;
+// var div_bl = this.parentElement.parentElement // goi de thang cha ngoai vi de xem trong do co con hay khong
+// var num_child = this.childElementCount; // dem so input co trong div cgha
+
+
+// if (num_child > 1) {
+//     var el_i = this;
+//     var el_div_parent = this.parentElement;
+//     el_div_parent.remove();
+// }
 
 // }
 // $("id").onclick = function() {
@@ -58,4 +75,17 @@ $("form").appendChild(createPhone);
 //     el_div.appendChild(el_i);
 //     el_i.onclick = remove;
 //     $("email").appendChild(el_div);
+// }
+// $("id_bt_submit").onclick = function() {
+//     var input = document.getElementsByTagName("input") // lấy các gía trị người dùng nhập trong thẻ input
+//     for (let i = 0; i <= input.length; i++) {
+//         //lấy giá trị input
+//         var v = input[i];
+//         if (v.value.trim() == "") {
+//             v.className = "tencclass";
+//             v.parentElement.appendChild("p");
+//             //v trả về thằng cha r thêm cais p để báo lỗi ra
+//         } //  lấy giá trị ra , trim loại bỏ 2 đâuf space
+
+//     }
 // }
