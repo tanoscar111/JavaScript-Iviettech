@@ -24,5 +24,5 @@ clickadd[0].onclick = function() {
 }
 var createPhone = document.createElement("p");
 var createTextPhone = document.createTextNode("Phone");
-createEmail.appendChild(createTextPhone);
-$("phone").appendChild(createEmail);
+createPhone.appendChild(createTextPhone);
+$("phone").appendChild(createPhone);
