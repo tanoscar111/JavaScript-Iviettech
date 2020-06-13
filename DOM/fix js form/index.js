@@ -37,3 +37,7 @@ $("create").onclick = function() {
     createDiv.appendChild(createi);
     $("div1").appendChild(createDiv);
 };
+
+
+// create div phone
+var
