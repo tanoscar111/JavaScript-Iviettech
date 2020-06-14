@@ -76,15 +76,37 @@ $("iconPhone").onclick = function() {
     createDiv.appendChild(createi);
 };
 $("btn").onclick = function() {
-    var input = document.getElementsByTagName("input") // lấy các gía trị người dùng nhập trong thẻ input
-    for (let i = 0; i <= input.length; i++) {
-        //lấy giá trị input
-        var v = input[i];
-        if (v.value.trim() == "") {
-            v.className = "tencclass";
-            v.parentElement.appendChild("p");
-            //v trả về thằng cha r thêm cais p để báo lỗi ra
-        } //  lấy giá trị ra , trim loại bỏ 2 đâuf space
-
-    }
+   // get toàn bô các thẻ input, trả về là 1 array gồm các thẻ input
+   var arr_input = document.getElementsByTagName("input");
+   // lần lượt get value đã input trong các thẻ
+   // sử dụng loop
+   for(let i = 0; i< arr_input.length;i++){
+       // cứ mõi phần tử trong array là 1 phần htmlobject input
+       var el_input = arr_input[i];
+       // get value của input
+       var value_input = el_input.value;
+       // kiểm tra giá trị input vào xem có empty không
+       if(value_input.trim() == "" ){
+           // hiện thị lỗi
+           // tạo thẻ span
+           var el_span = document.createElement("span");
+           // taọ node mess lỗi
+        var node_err = document.createTextNode("Plse input");
+        // add node vaò tag span
+        el_span.appendChild(node_err);
+        // display errỏ
+        
+        // với viêcj input trước đó lỗi và đã có mess lỗi hiện thị rồi thì không display lỗi nữa
+        // cânf check xem đã cos mess lôix tưong ưngứ cuar input đó chưa
+        if(el_input.parentElement.childElementCount == 2 
+            || el_input.parentElement.childElementCount == 5){
+            
+            // = 2 la cho input của block mail, bang năm cho block phone
+            // băng 2 và naưm là chưa có messs erro
+            el_input.parentElement.appendChild(el_span); // done
+            // button maf thư hiện js thì để type buttoon 
+        }       
+    }// ok thaayf e camr onw aj
+    
+   }
 }
