@@ -31,7 +31,7 @@ $("create").onclick = function() {
     createInput.className = "input col-md-6";
     var createi = createEl("i");
     createi.className = "fas fa-minus-circle col-md-6";
-    createi.onclick = removeInput;
+    createi.onclick = removeInput; // gán nên không cần thực thi vì nó tự động
     createDiv.appendChild(createInput);
     createDiv.appendChild(createi);
     $("div1").appendChild(createDiv);
@@ -76,37 +76,37 @@ $("iconPhone").onclick = function() {
     createDiv.appendChild(createi);
 };
 $("btn").onclick = function() {
-   // get toàn bô các thẻ input, trả về là 1 array gồm các thẻ input
-   var arr_input = document.getElementsByTagName("input");
-   // lần lượt get value đã input trong các thẻ
-   // sử dụng loop
-   for(let i = 0; i< arr_input.length;i++){
-       // cứ mõi phần tử trong array là 1 phần htmlobject input
-       var el_input = arr_input[i];
-       // get value của input
-       var value_input = el_input.value;
-       // kiểm tra giá trị input vào xem có empty không
-       if(value_input.trim() == "" ){
-           // hiện thị lỗi
-           // tạo thẻ span
-           var el_span = document.createElement("span");
-           // taọ node mess lỗi
-        var node_err = document.createTextNode("Plse input");
-        // add node vaò tag span
-        el_span.appendChild(node_err);
-        // display errỏ
-        
-        // với viêcj input trước đó lỗi và đã có mess lỗi hiện thị rồi thì không display lỗi nữa
-        // cânf check xem đã cos mess lôix tưong ưngứ cuar input đó chưa
-        if(el_input.parentElement.childElementCount == 2 
-            || el_input.parentElement.childElementCount == 5){
-            
-            // = 2 la cho input của block mail, bang năm cho block phone
-            // băng 2 và naưm là chưa có messs erro
-            el_input.parentElement.appendChild(el_span); // done
-            // button maf thư hiện js thì để type buttoon 
-        }       
-    }// ok thaayf e camr onw aj
-    
-   }
+    // get toàn bô các thẻ input, trả về là 1 array gồm các thẻ input
+    var arr_input = document.getElementsByTagName("input");
+    // lần lượt get value đã input trong các thẻ
+    // sử dụng loop
+    for (let i = 0; i < arr_input.length; i++) {
+        // cứ mõi phần tử trong array là 1 phần htmlobject input
+        var el_input = arr_input[i];
+        // get value của input
+        var value_input = el_input.value;
+        // kiểm tra giá trị input vào xem có empty không
+        if (value_input.trim() == "") {
+            // hiện thị lỗi
+            // tạo thẻ span
+            var el_span = document.createElement("span");
+            // taọ node mess lỗi
+            var node_err = document.createTextNode("Plse input");
+            // add node vaò tag span
+            el_span.appendChild(node_err);
+            // display errỏ
+
+            // với viêcj input trước đó lỗi và đã có mess lỗi hiện thị rồi thì không display lỗi nữa
+            // cânf check xem đã cos mess lôix tưong ưngứ cuar input đó chưa
+            if (el_input.parentElement.childElementCount == 2 ||
+                el_input.parentElement.childElementCount == 5) {
+
+                // = 2 la cho input của block mail, bang năm cho block phone
+                // băng 2 và naưm là chưa có messs erro
+                el_input.parentElement.appendChild(el_span); // done
+                // button maf thư hiện js thì để type buttoon 
+            }
+        } // ok thaayf e camr onw aj
+
+    }
 }
