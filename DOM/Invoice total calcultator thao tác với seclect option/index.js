@@ -3,7 +3,7 @@ function $(id) {
 }
 
 function valid(value) {
-    var check = isNaN(value) || value < 0 ? true : false;
+    var check = isNaN(value) || value < 0 || value <= 500 ? true : false;
     if (check) {
         alert("please again");
         $("id_form").reset();

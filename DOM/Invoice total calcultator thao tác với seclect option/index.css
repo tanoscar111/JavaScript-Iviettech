@@ -2,8 +2,8 @@ main {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-}
-
-form {
-    height: 100vh !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid black;
+    margin-top: 100px;
 }
