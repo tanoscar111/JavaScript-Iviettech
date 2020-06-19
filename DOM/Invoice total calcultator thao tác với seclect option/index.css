@@ -1,8 +1,7 @@
 main {
-    background-image: url(./10\ great\ ways\ to\ maximise\ your\ small\ space\ -\ Home\ &\ Decor\ Singapore.jpeg);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 form {

@@ -13,39 +13,44 @@
 
 <body>
     <main>
-        <h1 class="col-md-12 text-left">Invoice Total Calculator</h1>
-        <h1 class="col-md-12 text-left">
-            Enter the two value that forlow and click "Calculate"
-        </h1>
-        <div class="row div1">
-            <div class="col-md-6">
-                <h3>Customer type</h3>
-                <h3>Invoice Subtotal</h3>
-            </div>
-            <div class="col-md-6">
-                <select class="form-control" id="id_selection">
-            <option value="0">lay</option>
-            <option value="1">Danh sách 02</option>
-            <option value="2">other</option>
-          </select>
-
-                <input type="text" class="form-control" id="getinputInvoice" />
-            </div>
-        </div>
-        <div class="row div2">
-            <div class="col-md-6">
-                <h3>Discount Percent</h3>
-                <h3>Discount Amount</h3>
-                <h3>Invoice Total</h3>
-            </div>
-            <div class="col-md-6">
-                <div style="display: flex;">
-                    <input type="text" class="form-control" disabled enable id="getValuePercent" /><span>%</span>
+        <form action="" class="form-control" id="id_form">
+            <h1 class="col-md-12 text-left">Invoice Total Calculator</h1>
+            <h1 class="col-md-12 text-left">
+                Enter the two value that forlow and click "Calculate"
+            </h1>
+            <div class="row div1">
+                <div class="col-md-6">
+                    <h3>Customer type</h3>
+                    <h3>Invoice Subtotal</h3>
                 </div>
-                <input type="text" class="form-control" disabled />
-                <input type="text" class="form-control" disabled />
+                <div class="col-md-6">
+                    <select class="form-control" id="id_selection">
+              <option value="0">lay</option>
+              <option value="1">Honor</option>
+              <option value="2">other</option>
+            </select>
+
+                    <input type="text" class="form-control" id="getinputInvoice" />
+                </div>
             </div>
-        </div>
+            <div class="row div2">
+                <div class="col-md-6">
+                    <h3>Discount Percent</h3>
+                    <h3>Discount Amount</h3>
+                    <h3>Invoice Total</h3>
+                </div>
+                <div class="col-md-6">
+                    <div style="display: flex;">
+                        <input type="text" class="form-control" disabled enable id="getValuePercent" /><span>%</span>
+                    </div>
+                    <input type="text" class="form-control" disabled id="amount" />
+                    <input type="text" class="form-control" disabled id="sum" />
+                    <button type="button" class="" id="btn">Calculate</button>
+                </div>
+
+            </div>
+
+        </form>
     </main>
 </body>
 <script src="./index.js"></script>
