@@ -1,0 +1,22 @@
+main {
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    height: 100vh !important;
+}
+
+.iphone {
+    max-height: 100vh !important;
+    max-width: 50% !important;
+}
+
+form {
+    height: 100vh !important;
+}
+
+img {
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
