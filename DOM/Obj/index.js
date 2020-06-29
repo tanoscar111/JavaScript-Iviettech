@@ -49,3 +49,7 @@ create.prototype.method_name = function() {
 }
 var obj_st1 = new create("tan", 21) // ddoois tuong nay ke thua  cac thuoc tinh cuar create vaf them ke thua cuar metod_name
 obj_st1.method_name();
+//  prototype định nghĩ tính kế thừa
+// định nghĩ obj con kế thừa từ cha
+//var u1=new user("h",20);
+//u1.user=funtion
